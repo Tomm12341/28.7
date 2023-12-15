@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _28._7
+{
+    internal class Prenotazione
+    {
+        public DateTime Dataprenotazione {get; set;}
+        public DateTime Anno { get; set;}
+        public DateTime Dal { get; set; }
+        public DateTime Al { get; set; }
+        public float Caparra { get; set; }
+        public float Tariffa { get; set; }
+
+    }
+}
