@@ -10,7 +10,9 @@ namespace _28._7
     {
         public int Numero { get; set; }
         public string Descrizione { get; set; } 
-        public bool Tipologia { get; set; }
+        public string Tipologia { get; set; }
+
+        public string Trattamento { get; set; }
 
     }
 }

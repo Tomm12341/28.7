@@ -9,7 +9,7 @@ namespace _28._7
     internal class Prenotazione
     {
         public DateTime Dataprenotazione {get; set;}
-        public DateTime Anno { get; set;}
+        public float Anno { get; set;}
         public DateTime Dal { get; set; }
         public DateTime Al { get; set; }
         public float Caparra { get; set; }

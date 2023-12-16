@@ -1,0 +1,8 @@
+C:\Users\User\Source\Repos\28.7.1\28.7\bin\Debug\28.7.exe.config
+C:\Users\User\Source\Repos\28.7.1\28.7\bin\Debug\28.7.exe
+C:\Users\User\Source\Repos\28.7.1\28.7\bin\Debug\28.7.pdb
+C:\Users\User\Source\Repos\28.7.1\28.7\obj\Debug\28.7.csproj.AssemblyReference.cache
+C:\Users\User\Source\Repos\28.7.1\28.7\obj\Debug\28.7.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\Source\Repos\28.7.1\28.7\obj\Debug\28.7.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\28.7.1\28.7\obj\Debug\28.7.exe
+C:\Users\User\Source\Repos\28.7.1\28.7\obj\Debug\28.7.pdb
