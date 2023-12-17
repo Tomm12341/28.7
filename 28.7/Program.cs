@@ -37,6 +37,7 @@ namespace _28._7
 
             TimeSpan T = p.Al - p.Dal;
             int temposoggiorno = T.Days;
+            
 
             Camera c = new Camera();
 
@@ -56,18 +57,18 @@ namespace _28._7
             Console.WriteLine("Selezionare il tipo di trattamento(mezza pensione, pensione completa,pernottamento con prima colazione): ");
             c.Trattamento = Console.ReadLine();
 
-            double e = 50;
+            double e = 50; //tariffa giornaliera base(pensione completa)
 
             if (c.Trattamento == "mezza pensione")
             {
-                e = e / 2;
+                e = (e / 2)*temposoggiorno;
             }
             else if (c.Trattamento == "pensione completa")
             {
-                e = 50;
+                e = 50*temposoggiorno;
             } else
             {
-                e = e / 3;
+                e = (e / 3)*temposoggiorno;
             }
             double Tariffatotale = 0;
 
@@ -76,7 +77,7 @@ namespace _28._7
                 Tariffatotale = e + 25;
             }
             else
-                Tariffatotale = e + 50;
+                Tariffatotale =( e + 50);
 
             Console.WriteLine(" premi invio per il riepilogo:\n");
             Console.WriteLine("prenotazione effettuata il:{0}",riferimento);
