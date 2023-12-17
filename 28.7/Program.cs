@@ -79,6 +79,9 @@ namespace _28._7
             else
                 Tariffatotale =( e + 50);
 
+            double caparra = p.Caparra;
+            caparra = (1 / 3) * Tariffatotale;
+
             Console.WriteLine(" premi invio per il riepilogo:\n");
             Console.WriteLine("prenotazione effettuata il:{0}",riferimento);
 
