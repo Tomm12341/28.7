@@ -15,7 +15,7 @@ namespace _28._7
         public string Citta { get; set; }
         public string Provincia { get; set; }
         public string Email { get; set; }
-        public  int Numerotelefono { get; set; }
+        public  string Numerotelefono { get; set; }
 
        
     }

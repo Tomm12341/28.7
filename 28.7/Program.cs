@@ -14,78 +14,61 @@ namespace _28._7
             Prenotazione p = new Prenotazione();
 
             Console.WriteLine("Inserisci il tuo nome: ");
-            cliente.Nome = Console.ReadLine();
+            p.ClienteP.Nome =Console.ReadLine();
+
             Console.WriteLine("Inserisci il tuo cognome: ");
-            cliente.Cognome = Console.ReadLine();
+            p.ClienteP.Cognome=Console.ReadLine();
 
-            p.Dataprenotazione = DateTime.Today;
+            Console.WriteLine("Inserisci il tuo codice fiscale: ");
+            p.ClienteP.Codicefiscale = Console.ReadLine();
 
-            DateTime riferimento = new DateTime();
-            riferimento = DateTime.Today;
+            Console.WriteLine("Inserisci il tuo numero di telefono: ");
+            p.ClienteP.Numerotelefono = Console.ReadLine();
+            
+            Console.WriteLine("Inserisci la tua email: ");
+            p.ClienteP.Email= Console.ReadLine();
 
-            p.Anno = riferimento.Year;
+            Console.WriteLine("Inserisci la tua città: ");
+            p.ClienteP.Citta = Console.ReadLine();
+            
+            Console.WriteLine("Inserisci la tua provincia: ");
+            p.ClienteP.Email = Console.ReadLine();
 
-            Console.WriteLine("Che giorni verrai da noi?");
+            p.Dataprenotazione = DateTime.Now;
 
-            Console.WriteLine("Dal: ");
+            p.Anno = p.Dataprenotazione.Year;
+
+            Console.WriteLine("Da: ");
             p.Dal = DateTime.Parse(Console.ReadLine());
 
             Console.WriteLine("Al: ");
             p.Al = DateTime.Parse(Console.ReadLine());
 
-            TimeSpan T = p.Al - p.Dal;
-            int temposoggiorno = T.Days;
-            
+            Console.WriteLine("Selezionare il tipop di camera (singola o doppia): ");
+            p.CameraP.Tipologia= Console.ReadLine();
 
-            Camera c = new Camera();
+            Console.WriteLine("Inserire il tipo di trattamento(pensione completa, mezza pensione, pernottamento con prima colazione): ");
+            p.CameraP.Trattamento = Console.ReadLine();
 
+           Serviziaggiuntivi Colazioneincamera=new Serviziaggiuntivi();
 
-            Console.WriteLine("Scegli la camera (singola o doppia): ");
-            c.Tipologia = Console.ReadLine();
-            bool tipo; //se è singola è true 
-
-            if (c.Tipologia == "singola")
+            Colazioneincamera.Data = p.Al;
+           
+            if (p.CameraP.Tipologia == "singola")
             {
-                tipo = true;
-            } else
-            {
-                tipo = false;
-            }
-
-            Console.WriteLine("Selezionare il tipo di trattamento(mezza pensione, pensione completa,pernottamento con prima colazione): ");
-            c.Trattamento = Console.ReadLine();
-
-            double e = 50; //tariffa giornaliera base(pensione completa)
-
-            if (c.Trattamento == "mezza pensione")
-            {
-                e = (e / 2)*temposoggiorno;
-            }
-            else if (c.Trattamento == "pensione completa")
-            {
-                e = 50*temposoggiorno;
-            } else
-            {
-                e = (e / 3)*temposoggiorno;
-            }
-            double Tariffatotale = 0;
-
-            if (tipo == true)
-            {
-                Tariffatotale = e + 25;
+                Colazioneincamera.Quantita = 1;
             }
             else
-                Tariffatotale =( e + 50);
+                Colazioneincamera.Quantita = 2;
 
-            double caparra = p.Caparra;
-            caparra = (1 / 3) * Tariffatotale;
+            Colazioneincamera.Prezzo = 10;
 
-            Console.WriteLine(" premi invio per il riepilogo:\n");
-            Console.WriteLine("prenotazione effettuata il:{0}",riferimento);
+            Colazioneincamera.Descrizione = "Si può scegliere tra una colazione salata a base di salumi e una dolce con caffè e brioche ";
 
+            p.Serviziplus.Add(Colazioneincamera);
 
-
-
+            Console.WriteLine("Nome: {0}\n Cognome: {1}\n Email: {2\n Dal: {3}\n Al: {4}\n Tipologia: {5}\n Trattamento: {6}\n Servizi aggiuntivi: {7}", p.ClienteP.Nome, p.ClienteP.Cognome, p.ClienteP.Email, p.Dal, p.Al, p.CameraP.Tipologia, p.CameraP.Trattamento,p.Serviziplus);
+            
         }
 
         
