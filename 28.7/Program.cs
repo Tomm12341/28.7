@@ -13,8 +13,6 @@ namespace _28._7
         {
             Prenotazione p = new Prenotazione();
 
-            Cliente cliente = new Cliente();
-
             Console.WriteLine("Inserisci il tuo nome: ");
             cliente.Nome = Console.ReadLine();
             Console.WriteLine("Inserisci il tuo cognome: ");
